@@ -6,6 +6,5 @@ Blog.belongsTo(User)
 
 module.exports = {
   Blog,
-  User, 
-  syncModels
+  User
 }
