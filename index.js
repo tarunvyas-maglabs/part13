@@ -18,7 +18,7 @@ app.use('/api/login', loginRouter)
 app.use('/api/authors', authorsRouter)
 app.use('/api/reset', resetRouter)
 
-app.use('/', (_req, res) => {
+app.get('/', (_req, res) => {
   res.status(200).send('Ok')
 })
 
