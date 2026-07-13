@@ -19,7 +19,7 @@ app.use('/api/authors', authorsRouter)
 app.use('/api/reset', resetRouter)
 
 app.use('/', (_req, res) => {
-  res.status(200)
+  res.status(200).send('Ok')
 })
 
 const errorHandler = (error, request, response, next) => {
