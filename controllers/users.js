@@ -6,6 +6,11 @@ router.post('/', async (req, res, next) => {
   try {
     const { username, name, password } = req.body
 
+    if(!(username && name && password)) {
+      res.status(400).json({ error: 'Missing fields' })
+      return
+    } 
+
     const saltRounds = 10
     const passwordHash = await bcrypt.hash(password, saltRounds)
 
